@@ -1,0 +1,48 @@
+﻿@model CarDealerManager.Models.Store
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container">
+    <main role="main" class="pb-3">
+        <h1>Details</h1>
+        <div>
+            <h4>Store</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.DateOfPurchase)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.DateOfPurchase)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.WarrantyDuration)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.WarrantyDuration)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.car)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.car.CarBrandName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.customer)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.customer.FullName)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </main>
+</div>
